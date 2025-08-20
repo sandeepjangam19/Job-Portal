@@ -43,7 +43,7 @@
     var r = new sn_ws.RESTMessageV2();
     r.setHttpMethod("PUT");
     r.setEndpoint(endpoint);
-    r.setRequestHeader("Authorization", "token <YOUR_GITHUB_PAT>");
+    //r.setRequestHeader("Authorization", "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");
     r.setRequestHeader("Content-Type", "application/json");
 
     // 5. Payload for GitHub
@@ -64,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f4000464536b6210cc7d5eb0a0490e8a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Push To GIT</sys_name>
         <sys_overrides/>
         <sys_package display_value="Job Portal" source="x_1800372_job_port">f84481bb53df2210cc7d5eb0a0490e82</sys_package>
@@ -72,7 +72,7 @@
         <sys_scope display_value="Job Portal">f84481bb53df2210cc7d5eb0a0490e82</sys_scope>
         <sys_update_name>sys_script_f4000464536b6210cc7d5eb0a0490e8a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-20 09:51:35</sys_updated_on>
+        <sys_updated_on>2025-08-20 12:53:42</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
