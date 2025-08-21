@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1800372_job_port.IncidentYAMLExporter</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>IncidentYAMLExporter</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var IncidentYAMLExporter = Class.create();
+IncidentYAMLExporter.prototype = {
+    initialize: function() {},
+
+    toYAML: function(incidentSysId) {
+        var inc = new GlideRecord("x_1800372_job_port_github_user_input");
+        if (!inc.get(incidentSysId)) {
+            return "incident: {}\n";
+        }
+
+        var incidentObj = {
+          //  number: inc.getValue("number"),
+            short_description: inc.getValue("short_description"),
+            description: inc.getValue("description"),
+			user_name: inc.user_name.getDisplayValue()
+            // priority: inc.getValue("priority"),
+            // state: inc.getValue("state"),
+            // assignment_group: inc.assignment_group.getDisplayValue(),
+            // assigned_to: inc.assigned_to.getDisplayValue(),
+            // opened_at: inc.getValue("opened_at"),
+            // closed_at: inc.getValue("closed_at"),
+            // caller: inc.caller_id.getDisplayValue()
+        };
+
+        // Convert to YAML manually
+        var yaml = "incident:\n";
+        for (var key in incidentObj) {
+            if (incidentObj.hasOwnProperty(key)) {
+                var value = incidentObj[key];
+                if (value == null || value === "") {
+                    value = "null";
+                } else if (typeof value === "string" && value.indexOf(":") !== -1) {
+                    // Quote strings with special chars like ":" to avoid YAML errors
+                    value = '"' + value.replace(/"/g, '\\"') + '"';
+                }
+                yaml += "  " + key + ": " + value + "\n";
+            }
+        }
+        return yaml;
+    },
+
+    type: 'IncidentYAMLExporter'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-20 09:46:22</sys_created_on>
+        <sys_id>8aae7bd0536b6210cc7d5eb0a0490e62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>IncidentYAMLExporter</sys_name>
+        <sys_package display_value="Job Portal" source="x_1800372_job_port">f84481bb53df2210cc7d5eb0a0490e82</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Job Portal">f84481bb53df2210cc7d5eb0a0490e82</sys_scope>
+        <sys_update_name>sys_script_include_8aae7bd0536b6210cc7d5eb0a0490e62</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-20 09:46:22</sys_updated_on>
+    </sys_script_include>
+</record_update>

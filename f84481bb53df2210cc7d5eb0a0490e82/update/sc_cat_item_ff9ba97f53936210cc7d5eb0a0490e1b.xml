@@ -11,7 +11,7 @@
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p>Test -1<br />Test -2</p>]]></description>
+        <description/>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -29,7 +29,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>SJ-Test</name>
+        <name>Test</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -47,7 +47,7 @@
         <ordered_item_link/>
         <owner display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</owner>
         <picture/>
-        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=f7f545bf53df2210cc7d5eb0a0490e84&amp;sysparm_preview=true", "summary");</preview>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=ff9ba97f53936210cc7d5eb0a0490e1b&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>
         <published_ref/>
         <recurring_frequency/>
@@ -58,50 +58,50 @@
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
-        <short_description>Demo - Snow Integration with Github</short_description>
+        <short_description>Test - SJ</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state/>
         <sys_class_name>sc_cat_item</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-18 06:57:19</sys_created_on>
-        <sys_id>f7f545bf53df2210cc7d5eb0a0490e84</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>SJ-Test</sys_name>
+        <sys_created_on>2025-08-18 09:41:43</sys_created_on>
+        <sys_id>ff9ba97f53936210cc7d5eb0a0490e1b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Test</sys_name>
         <sys_package display_value="Job Portal" source="x_1800372_job_port">f84481bb53df2210cc7d5eb0a0490e82</sys_package>
         <sys_policy/>
         <sys_scope display_value="Job Portal">f84481bb53df2210cc7d5eb0a0490e82</sys_scope>
-        <sys_update_name>sc_cat_item_f7f545bf53df2210cc7d5eb0a0490e84</sys_update_name>
+        <sys_update_name>sc_cat_item_ff9ba97f53936210cc7d5eb0a0490e1b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-18 09:34:36</sys_updated_on>
+        <sys_updated_on>2025-08-18 13:12:47</sys_updated_on>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>4</version>
+        <version>2</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
         <workflow/>
     </sc_cat_item>
-    <sys_translated_text action="delete_multiple" query="documentkey=f7f545bf53df2210cc7d5eb0a0490e84"/>
-    <fx_price action="delete_multiple" query="id=f7f545bf53df2210cc7d5eb0a0490e84"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=ff9ba97f53936210cc7d5eb0a0490e1b"/>
+    <fx_price action="delete_multiple" query="id=ff9ba97f53936210cc7d5eb0a0490e1b"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price</field>
-        <id>f7f545bf53df2210cc7d5eb0a0490e84</id>
+        <id>ff9ba97f53936210cc7d5eb0a0490e1b</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-18 06:57:19</sys_created_on>
-        <sys_id>97064d7f53df2210cc7d5eb0a0490edc</sys_id>
+        <sys_created_on>2025-08-18 09:41:43</sys_created_on>
+        <sys_id>1fabe17f53936210cc7d5eb0a0490e05</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-18 06:57:19</sys_updated_on>
+        <sys_updated_on>2025-08-18 09:41:43</sys_updated_on>
         <table>sc_cat_item</table>
         <type>calculated</type>
     </fx_price>
@@ -109,16 +109,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>recurring_price</field>
-        <id>f7f545bf53df2210cc7d5eb0a0490e84</id>
+        <id>ff9ba97f53936210cc7d5eb0a0490e1b</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-18 06:57:19</sys_created_on>
-        <sys_id>930685bf53df2210cc7d5eb0a0490ea9</sys_id>
+        <sys_created_on>2025-08-18 09:41:43</sys_created_on>
+        <sys_id>1fabe17f53936210cc7d5eb0a0490e06</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-18 06:57:19</sys_updated_on>
+        <sys_updated_on>2025-08-18 09:41:43</sys_updated_on>
         <table>sc_cat_item</table>
         <type>calculated</type>
     </fx_price>

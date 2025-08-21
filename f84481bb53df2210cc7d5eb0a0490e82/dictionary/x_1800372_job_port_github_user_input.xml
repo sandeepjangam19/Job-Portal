@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="12173798532b6210cc7d5eb0a0490ed1" label="GitHub User Input" max_length="40" name="x_1800372_job_port_github_user_input" type="collection">
+        <element label="User Name" max_length="32" name="user_name" reference="sys_user" type="reference"/>
+        <element label="Short Description" max_length="40" name="short_description" type="string"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="user_name"/>
+        </index>
+    </element>
+</database>
