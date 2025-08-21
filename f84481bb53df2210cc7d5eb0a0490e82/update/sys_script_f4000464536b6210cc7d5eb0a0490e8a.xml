@@ -5,7 +5,7 @@
         <action_delete>false</action_delete>
         <action_insert>true</action_insert>
         <action_query>false</action_query>
-        <action_update>false</action_update>
+        <action_update>true</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
@@ -18,7 +18,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Push To GIT</name>
+        <name>GitHub Update</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -30,28 +30,35 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
     // 1. Convert Incident to YAML
-    var yamlString = new IncidentYAMLExporter().IncidentYAMLExporter(current.sys_id);
+    var yamlString = new IncidentYAMLExporter().toYAML(current.sys_id);
+	//gs.addErrorMessage
+	//gs.info("YAML" + yamlString);
 
     // 2. Encode in base64 for GitHub
-    var encoded = GlideStringUtil.base64Encode(yamlString);
+   // var encoded = GlideStringUtil.base64Encode(yamlString);
+	//gs.log("YAML" + encoded);
 
     // 3. Build GitHub endpoint
     var fileName = current.number + ".yaml";
-    var endpoint = "https://api.github.com/repos/sandeepjangam19/Job-Portal/contents/incidents/" + fileName;
-
+	gs.info("YAML" + fileName);
+    //var endpoint = "https://api.github.com/repos/sandeepjangam19/Job-Portal/contents/incidents/" + fileName;
+    var endpoint = "https://api.github.com/repos/sandeepjangam19/Job-Portal/contents/incidents/"+fileName;
     // 4. Create REST message
     var r = new sn_ws.RESTMessageV2();
+	gs.info("r" + r);
     r.setHttpMethod("PUT");
     r.setEndpoint(endpoint);
     //r.setRequestHeader("Authorization", "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");
-    r.setRequestHeader("Content-Type", "application/json");
+    r.setRequestHeader("Content-Type", "application/x-yaml");
 
     // 5. Payload for GitHub
-    var body = {
-        "message": "Create YAML for " + current.number,
-        "content": encoded
-    };
-    r.setRequestBody(JSON.stringify(body));
+    // var body = {
+    //     "message": "Create YAML for " + current.number,
+    //     "content": encoded
+    // };
+    //r.setRequestBody(JSON.stringify(body));
+	r.setRequestBody(yamlString);
+	
 
     // 6. Execute REST call
     var response = r.execute();
@@ -64,17 +71,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f4000464536b6210cc7d5eb0a0490e8a</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Push To GIT</sys_name>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>GitHub Update</sys_name>
         <sys_overrides/>
         <sys_package display_value="Job Portal" source="x_1800372_job_port">f84481bb53df2210cc7d5eb0a0490e82</sys_package>
         <sys_policy/>
         <sys_scope display_value="Job Portal">f84481bb53df2210cc7d5eb0a0490e82</sys_scope>
         <sys_update_name>sys_script_f4000464536b6210cc7d5eb0a0490e8a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-20 12:53:42</sys_updated_on>
+        <sys_updated_on>2025-08-21 08:51:28</sys_updated_on>
         <template/>
-        <when>after</when>
+        <when>async_always</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=f4000464536b6210cc7d5eb0a0490e8a"/>
 </record_update>
